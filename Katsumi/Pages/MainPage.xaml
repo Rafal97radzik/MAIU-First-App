@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Katsumi.MainPage">
+             xmlns:vm="clr-namespace:Katsumi.ViewModels"
+             xmlns:c="clr-namespace:Katsumi.Converters"
+             x:Class="Katsumi.Pages.MainPage"
+             x:DataType="vm:MainViewModel">
+
+    <ContentPage.Resources>
+        <c:ClickCountConverter x:Key="clickCount" />
+    </ContentPage.Resources>
 			 
     <ScrollView>
         <VerticalStackLayout 
@@ -28,11 +35,10 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button 
-                x:Name="CounterBtn"
-                Text="Click me"
+            <Button
+                Text="{Binding Count, Converter={StaticResource clickCount}}"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Command="{Binding IncrementCountCommand}"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

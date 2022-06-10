@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Katsumi.Converters
+namespace Katsumi.Helpers.Converters
 {
     public class ClickCountConverter : IValueConverter
     {

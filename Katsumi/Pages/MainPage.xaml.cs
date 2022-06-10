@@ -4,11 +4,11 @@ namespace Katsumi.Pages;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage(MainViewModel mainViewModel)
+	public MainPage(MainViewModel viewModel)
 	{
 		InitializeComponent();
 
-		BindingContext = mainViewModel;
+        BindingContext = viewModel;
     }
 }
 

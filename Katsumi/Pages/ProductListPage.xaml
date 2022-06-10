@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Katsumi.ViewModels"
+             x:Class="Katsumi.Pages.ProductListPage"
+             x:DataType="vm:ProductListViewModel">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+            Grid.Row="0"
+            Spacing="5"
+            Padding="20">
+            
+            
+            
+        </VerticalStackLayout>
+        
+        <HorizontalStackLayout 
+            Grid.Row="1"
+            Spacing="30"
+            Padding="20"
+            HorizontalOptions="Center">
+
+            <Button
+                Text="Back"
+                Command="{Binding SwichPageCommand}"
+                CommandParameter="back"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Next"
+                Command="{Binding SwichPageCommand}"
+                CommandParameter="next"
+                HorizontalOptions="Center" />
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout 
+            Grid.Row="2"
+            Spacing="30"
+            Padding="20"
+            HorizontalOptions="Center">
+
+            <Button
+                Text="Back v2"
+                Command="{Binding SwichPage2Command}"
+                CommandParameter="back"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Next v2"
+                Command="{Binding SwichPage2Command}"
+                CommandParameter="next"
+                HorizontalOptions="Center" />
+
+        </HorizontalStackLayout>
+
+    </Grid>
+</ContentPage>

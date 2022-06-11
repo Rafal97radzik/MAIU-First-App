@@ -14,7 +14,7 @@ namespace Katsumi.ViewModels
         private readonly ProductListPage productListPage;
 
         [ObservableProperty]
-        int _count;
+        private int _count;
 
         public MainViewModel(ProductListPage productListPage)
         {

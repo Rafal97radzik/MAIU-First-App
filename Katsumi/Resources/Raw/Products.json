@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Pomidor",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/6343/Pomidor-kg.jpg",
+    "Price": 9.99,
+    "UnitOfMeasure": "kg"
+  },
+  {
+    "Name": "Kiwi",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/6296/Kiwi-szt.jpg",
+    "Price": 1.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Ziele Angelskie",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/4955/d22c9efeec5ab005e04e8e03c9eb043c.jpg",
+    "Price": 1.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Pesto",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/environment/cache/images/500_500_productGfx_4645/barilla.jpg",
+    "Price": 12.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Lody Cart Dor Truskawkowe",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/1223/c483ce6afa770633e6f86249f15a1858.jpg",
+    "Price": 10.0,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Migdały Płatki",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/2639/5905027000154_mp-1.jpg",
+    "Price": 4.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Pomidor",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/6343/Pomidor-kg.jpg",
+    "Price": 9.99,
+    "UnitOfMeasure": "kg"
+  },
+  {
+    "Name": "Kiwi",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/6296/Kiwi-szt.jpg",
+    "Price": 1.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Ziele Angelskie",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/4955/d22c9efeec5ab005e04e8e03c9eb043c.jpg",
+    "Price": 1.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Pesto",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/environment/cache/images/500_500_productGfx_4645/barilla.jpg",
+    "Price": 12.99,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Lody Cart Dor Truskawkowe",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/1223/c483ce6afa770633e6f86249f15a1858.jpg",
+    "Price": 10.0,
+    "UnitOfMeasure": "szt"
+  },
+  {
+    "Name": "Migdały Płatki",
+    "PhotoUrl": "https://www.delikatesy.bochnia.pl/userdata/public/gfx/2639/5905027000154_mp-1.jpg",
+    "Price": 4.99,
+    "UnitOfMeasure": "szt"
+  }
+]

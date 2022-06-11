@@ -49,11 +49,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview3" />
+	  <None Remove="Resources\Raw\Products.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\load.gif" />
 	  <None Remove="Resources\Raw\Products.json" />
 	</ItemGroup>
 

@@ -18,64 +18,127 @@
             <RowDefinition Height="90"/>
         </Grid.RowDefinitions>
 
-        <CollectionView
-            Grid.Row="0"
-            ItemsSource="{Binding Products}">
+        <HorizontalStackLayout
+             Grid.Row="0">
 
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical"/>
-            </CollectionView.ItemsLayout>
+            <CollectionView
+                MaximumWidthRequest="700"
+                ItemsSource="{Binding Products}">
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="m:Product">
-                    
-                    <Grid Padding="10">
-                       
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50" />
-                            <RowDefinition Height="50" />
-                        </Grid.RowDefinitions>
-                        
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        
-                        <Image
-                            Grid.RowSpan="2"
-                            Source="{Binding PhotoUrl}"
-                            Aspect="AspectFill" />
-                       
-                        <Label
-                            Grid.Column="1"
-                            Margin="10"
-                            Text="{Binding Name}"
-                            FontAttributes="Bold"
-                            LineBreakMode="TailTruncation" />
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
 
-                        <Label
-                            Grid.Row="1"
-                            Margin="10"
-                            Grid.Column="1"
-                            LineBreakMode="TailTruncation"
-                            FontAttributes="Italic"
-                            VerticalOptions="End">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Product">
 
-                            <Label.Text>
-                                <MultiBinding Converter="{StaticResource productPricePerUnitOfMeasure}">
-                                    <Binding Path="Price"/>
-                                    <Binding Path="UnitOfMeasure"/>
-                                </MultiBinding>
-                            </Label.Text>
+                        <Grid Padding="10">
 
-                        </Label>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
 
-                    </Grid>
-                    
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-        </CollectionView>
+                            <Image
+                                Grid.RowSpan="2"
+                                Source="{Binding PhotoUrl}"
+                                Aspect="AspectFill" />
+
+                            <Label
+                                Grid.Column="1"
+                                Margin="10"
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                LineBreakMode="TailTruncation" />
+
+                            <Label
+                                Grid.Row="1"
+                                Margin="10"
+                                Grid.Column="1"
+                                LineBreakMode="TailTruncation"
+                                FontAttributes="Italic"
+                                VerticalOptions="End">
+
+                                <Label.Text>
+                                    <MultiBinding Converter="{StaticResource productPricePerUnitOfMeasure}">
+                                        <Binding Path="Price"/>
+                                        <Binding Path="UnitOfMeasure"/>
+                                    </MultiBinding>
+                                </Label.Text>
+
+                            </Label>
+
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <ListView
+                MaximumWidthRequest="700"
+                RowHeight="100"
+                ItemsSource="{Binding Products}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Product">
+
+                        <ViewCell>
+                            <Grid Padding="10">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                                    Grid.RowSpan="2"
+                                    Source="{Binding PhotoUrl}"
+                                    Aspect="AspectFill" />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Margin="10"
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"
+                                    LineBreakMode="TailTruncation" />
+
+                                <Label
+                                    Grid.Row="1"
+                                    Margin="10"
+                                    Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
+                                    FontAttributes="Italic"
+                                    VerticalOptions="End">
+
+                                    <Label.Text>
+                                        <MultiBinding Converter="{StaticResource productPricePerUnitOfMeasure}">
+                                            <Binding Path="Price"/>
+                                            <Binding Path="UnitOfMeasure"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+
+                                </Label>
+
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </HorizontalStackLayout>
 
         <HorizontalStackLayout
             Grid.Row="1"

@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Katsumi.ViewModels"
              xmlns:m="clr-namespace:Katsumi.Models"
+             xmlns:c="clr-namespace:Katsumi.Helpers.Converters"
              x:Class="Katsumi.Pages.ProductListPage"
              x:DataType="vm:ProductListViewModel">
+
+    <ContentPage.Resources>
+        <c:ProductPricePerUnitOfMeasureMultiConverter x:Key="productPricePerUnitOfMeasure" />
+    </ContentPage.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -27,42 +32,41 @@
                     <Grid Padding="10">
                        
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="35" />
-                            <RowDefinition Height="35" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
                         </Grid.RowDefinitions>
                         
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="100" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         
                         <Image
                             Grid.RowSpan="2"
                             Source="{Binding PhotoUrl}"
-                            Aspect="AspectFill"
-                            HeightRequest="60"
-                            WidthRequest="60" />
+                            Aspect="AspectFill" />
                        
                         <Label
                             Grid.Column="1"
+                            Margin="10"
                             Text="{Binding Name}"
                             FontAttributes="Bold"
                             LineBreakMode="TailTruncation" />
 
                         <Label
                             Grid.Row="1"
+                            Margin="10"
                             Grid.Column="1"
                             LineBreakMode="TailTruncation"
                             FontAttributes="Italic"
                             VerticalOptions="End">
 
-                            <!-- Na ten moment MultiBinding nie działa poprawnie z MAUI -->
-                            <!--<Label.Text Converter="{StaticResource productPricePerUnitOfMeasure}">
-                                <MultiBinding>
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource productPricePerUnitOfMeasure}">
                                     <Binding Path="Price"/>
                                     <Binding Path="UnitOfMeasure"/>
                                 </MultiBinding>
-                            </Label.Text>-->
+                            </Label.Text>
 
                         </Label>
 
